@@ -46,7 +46,7 @@ public class IndicesColumnas {
 		Integer indice = getIndexOf(indicesColumnas, "labCode");
 		return indice;
 	}
-	public Integer getIndicesOfSpeciesName(Map<Integer, String> indicesColumnas) {
+	public Integer getIndicesOfEpithet(Map<Integer, String> indicesColumnas) {
 		Integer indice = getIndexOf(indicesColumnas, "SpeciesName");
 		return indice;
 	}
@@ -54,26 +54,46 @@ public class IndicesColumnas {
 		Integer indice = getIndexOf(indicesColumnas, "CollectionNumber");
 		return indice;
 	}
-//	public Integer getIndicesOfLabCode(Map<Integer, String> indicesColumnas) {
-//		Integer indice = getIndexOf(indicesColumnas, "labCode");
-//		return indice;
-//	}
-//	public Integer getIndicesOfLabCode(Map<Integer, String> indicesColumnas) {
-//		Integer indice = getIndexOf(indicesColumnas, "labCode");
-//		return indice;
-//	}
-//	public Integer getIndicesOfLabCode(Map<Integer, String> indicesColumnas) {
-//		Integer indice = getIndexOf(indicesColumnas, "labCode");
-//		return indice;
-//	}
-//	public Integer getIndicesOfLabCode(Map<Integer, String> indicesColumnas) {
-//		Integer indice = getIndexOf(indicesColumnas, "labCode");
-//		return indice;
-//	}
-//	public Integer getIndicesOfLabCode(Map<Integer, String> indicesColumnas) {
-//		Integer indice = getIndexOf(indicesColumnas, "labCode");
-//		return indice;
-//	}
+	public Integer getIndicesOfBGT(Map<Integer, String> indicesColumnas) {
+		Integer indice = getIndexOf(indicesColumnas, "B_GT");
+		return indice;
+	}
+	public Integer getIndicesOfFamily(Map<Integer, String> indicesColumnas) {
+		Integer indice = getIndexOf(indicesColumnas, "Family");
+		return indice;
+	}
+	public Integer getIndicesOfGenus(Map<Integer, String> indicesColumnas) {
+		Integer indice = getIndexOf(indicesColumnas, "Genus");
+		return indice;
+	}
+	public Integer getIndicesOfSubgenus(Map<Integer, String> indicesColumnas) {
+		Integer indice = getIndexOf(indicesColumnas, "Subgenus");
+		return indice;
+	}
+	public Integer getIndicesOfCountry(Map<Integer, String> indicesColumnas) {
+		Integer indice = getIndexOf(indicesColumnas, "Country");
+		return indice;
+	}
+	public Integer getIndicesOfLocality(Map<Integer, String> indicesColumnas) {
+		Integer indice = getIndexOf(indicesColumnas, "Locality");
+		return indice;
+	}
+	public Integer getIndicesOfCollDate(Map<Integer, String> indicesColumnas) {
+		Integer indice = getIndexOf(indicesColumnas, "CollDate");
+		return indice;
+	}
+	public Integer getIndicesOfLatitud(Map<Integer, String> indicesColumnas) {
+		Integer indice = getIndexOf(indicesColumnas, "Latitud");
+		return indice;
+	}
+	public Integer getIndicesOfLongitude(Map<Integer, String> indicesColumnas) {
+		Integer indice = getIndexOf(indicesColumnas, "Longitude");
+		return indice;
+	}
+	public Integer getIndicesOfTissueAvailable(Map<Integer, String> indicesColumnas) {
+		Integer indice = getIndexOf(indicesColumnas, "TissueAvailable");
+		return indice;
+	}
 //	public Integer getIndicesOfLabCode(Map<Integer, String> indicesColumnas) {
 //		Integer indice = getIndexOf(indicesColumnas, "labCode");
 //		return indice;
