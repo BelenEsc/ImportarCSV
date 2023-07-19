@@ -14,20 +14,22 @@ public class LeerCSV {
 		this.path = path;
 	}
 
-	public List<List<String>> seleccionaCSV() {
-		List<List<String>> records = new ArrayList<List<String>>();
+	public List<String> seleccionaCSV() {
+		List<String> records = new ArrayList<String>();
 		FileReader leerCSV = null;
 		String line;
 		try {
 			leerCSV = new FileReader(new File(path));
 			BufferedReader buffer = new BufferedReader(leerCSV);
 			while ((line = buffer.readLine()) != null) {
-				String[] values = line.split(";");
-				records.add(Arrays.asList(values));
+				String values = line;
+				records.add(values);
 
+//				System.out.println(values);
+//				System.out.println();
 			}
 		} catch (Exception e) {
-			System.out.println("no se pudo leer el archivo " + e.getMessage());
+			System.out.println("no se pudo leer el archivo csv" + e.getMessage());
 		}
 		return records;
 	}
