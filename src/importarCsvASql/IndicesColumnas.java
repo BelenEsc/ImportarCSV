@@ -62,7 +62,7 @@ public class IndicesColumnas {
 	}
 	
 	public Integer getIndicesOfLabCode(Map<Integer, String> indicesColumnas) {
-		Integer indice = getIndexOf(indicesColumnas, "x2");
+		Integer indice = getIndexOf(indicesColumnas, "LabCode");
 		return indice;
 	}
 	
@@ -75,7 +75,7 @@ public class IndicesColumnas {
 	}
 	
 	public Integer getIndicesOfEpithet(Map<Integer, String> indicesColumnas) {
-		Integer indice = getIndexOf(indicesColumnas, "SpeciesName");
+		Integer indice = getIndexOf(indicesColumnas, "Specific Epithet");
 		return indice;
 	}
 	
@@ -101,7 +101,7 @@ public class IndicesColumnas {
 	}
 	
 	public Integer getIndicesOfBGT(Map<Integer, String> indicesColumnas) {
-		Integer indice = getIndexOf(indicesColumnas, "B_GT");
+		Integer indice = getIndexOf(indicesColumnas, "Tissue ID");
 		return indice;
 	}
 	
@@ -153,7 +153,7 @@ public class IndicesColumnas {
 	}
 	
 	public Integer getIndicesOfCountry(Map<Integer, String> indicesColumnas) {
-		Integer indice = getIndexOf(indicesColumnas, "Country");
+		Integer indice = getIndexOf(indicesColumnas, "CountryName");
 		return indice;
 	}
 	
@@ -179,7 +179,7 @@ public class IndicesColumnas {
 	}
 	
 	public Integer getIndicesOfAltitud(Map<Integer, String> indicesColumnas) {
-		Integer indice = getIndexOf(indicesColumnas, "Altitud");
+		Integer indice = getIndexOf(indicesColumnas, "Raw Data Altitude");
 		return indice;
 	}
 	
@@ -192,7 +192,7 @@ public class IndicesColumnas {
 	}
 	
 	public Integer getIndicesOfCollDate(Map<Integer, String> indicesColumnas) {
-		Integer indice = getIndexOf(indicesColumnas, "CollDate");
+		Integer indice = getIndexOf(indicesColumnas, "Collection Date from");
 		return indice;
 	}
 	
@@ -205,7 +205,7 @@ public class IndicesColumnas {
 	}
 	
 	public Integer getIndicesOfLatitud(Map<Integer, String> indicesColumnas) {
-		Integer indice = getIndexOf(indicesColumnas, "Latitud");
+		Integer indice = getIndexOf(indicesColumnas, "Latitude");
 		return indice;
 	}
 	
@@ -231,7 +231,7 @@ public class IndicesColumnas {
 	}
 	
 	public Integer getIndicesOfTissueAvailable(Map<Integer, String> indicesColumnas) {
-		Integer indice = getIndexOf(indicesColumnas, "TissueAvailable");
+		Integer indice = getIndexOf(indicesColumnas, "Tissue Availability");
 		return indice;
 	}
 	

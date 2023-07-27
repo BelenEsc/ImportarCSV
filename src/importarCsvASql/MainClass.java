@@ -11,6 +11,9 @@ public class MainClass {
 		// TODO Auto-generated method stub
 		ConeccionDB conex = new ConeccionDB();
 		Connection conexion = conex.dameConexion();
+		
+		
+		
 		Map<Integer, String> devuelveIndicesHeadersDB = conex.devuelveIndicesHeadersDB(conexion);
 //		List <String> columnaX = conex.textoEnColumnas(conexion, "Locality");
 //		for (String x : columnaX) {
@@ -124,11 +127,105 @@ public class MainClass {
 		System.out.println("indice del tissue available: " + tissueAvailableIndice );
 
 		
-//
-//		List<String> columnaVoucher = indicesColumnas.columnaVoucher(csvEnColumnas, labCodeVoucher);
-//		for (String elementoEnColumnaVoucher : columnaVoucher) {
-//			System.out.println(" elemento en la columna voucher" + elementoEnColumnaVoucher);
-//		}
+		List<String> columnaVoucher = indicesColumnas.columnaVoucher(csvEnColumnas, voucherIndice);
+		for (String elementoEnColumnaVoucher : columnaVoucher) {
+			System.out.println(" elemento en la columna voucher: " + elementoEnColumnaVoucher);
+		}
+		
+		List<String> columnaCollector = indicesColumnas.columnaCollector(csvEnColumnas, colectorIndice);
+		for (String elementoEnColumnaCollector: columnaCollector) {
+			System.out.println(" elemento en la columna colector: " + elementoEnColumnaCollector);
+		}
+	
+		List<String> columnaLabcode = indicesColumnas.columnaLabCode(csvEnColumnas, labCodeIndice);
+		for (String elementoEnColumna: columnaLabcode) {
+			System.out.println(" elemento en la columna labcode: " + elementoEnColumna);
+		}
+
+		List<String> columnaEpithet = indicesColumnas.columnaEpithet(csvEnColumnas, epithetIndice);
+		for (String elementoEnColumna: columnaEpithet) {
+			System.out.println(" elemento en la columna epiteto: " + elementoEnColumna);
+		}
+		
+		List<String> columnaCollNumber= indicesColumnas.columnaCollectorNumber(csvEnColumnas, collNumberIndice);
+		for (String elementoEnColumna: columnaCollNumber) {
+			System.out.println(" elemento en la columna coll number: " + elementoEnColumna);
+		}
+		
+		List<String> columnaBGT= indicesColumnas.columnaBGT(csvEnColumnas, BGTIndice);
+		for (String elementoEnColumna: columnaBGT) {
+			System.out.println(" elemento en la columna BGT: " + elementoEnColumna);
+		}
+		
+		
+		List<String> columnaFamily= indicesColumnas.columnaFamily(csvEnColumnas, familyIndice);
+		for (String elementoEnColumna: columnaFamily) {
+			System.out.println(" elemento en la columna family: " + elementoEnColumna);
+		}
+		
+		List<String> columnaGenus= indicesColumnas.columnaGenus(csvEnColumnas, genusIndice);
+		for (String elementoEnColumna: columnaGenus) {
+			System.out.println(" elemento en la columna genus: " + elementoEnColumna);
+		}
+	
+		List<String> columnaSubgenus= indicesColumnas.columnaSubgenus(csvEnColumnas, subgenusIndice);
+		for (String elementoEnColumna: columnaSubgenus) {
+			System.out.println(" elemento en la columna subgenus: " + elementoEnColumna);
+		}
+		
+		List<String> columnaCountry= indicesColumnas.columnaCountry(csvEnColumnas, countryIndice);
+		for (String elementoEnColumna: columnaCountry) {
+			System.out.println(" elemento en la columna country: " + elementoEnColumna);
+		}
+		
+		List<String> columnaLocality= indicesColumnas.columnaLocality(csvEnColumnas, localityIndice);
+		for (String elementoEnColumna: columnaLocality) {
+			System.out.println(" elemento en la columna locality: " + elementoEnColumna);
+		}
+		
+		List<String> columnaAltitud= indicesColumnas.columnaAltitud(csvEnColumnas, altitudIndice);
+		for (String elementoEnColumna: columnaAltitud) {
+			System.out.println(" elemento en la columna altitud: " + elementoEnColumna);
+		}
+		
+		List<String> columnaCollDate= indicesColumnas.columnaCollDate(csvEnColumnas, collDateIndice);
+		for (String elementoEnColumna: columnaCollDate) {
+			System.out.println(" elemento en la columna colection date: " + elementoEnColumna);
+		}
+		
+		List<String> columnaLatitud= indicesColumnas.columnaLatitud(csvEnColumnas, latitudIndice);
+		for (String elementoEnColumna: columnaLatitud) {
+			System.out.println(" elemento en la columna latitud: " + elementoEnColumna);
+		}
+		
+		List<String> columnaLongitud= indicesColumnas.columnaLongitude(csvEnColumnas, longitudIndice);
+		for (String elementoEnColumna: columnaLongitud) {
+			System.out.println(" elemento en la columna longitud: " + elementoEnColumna);
+		}
+		
+		List<String> columnaTissueAvailable= indicesColumnas.columnaTissueAvailable(csvEnColumnas, tissueAvailableIndice);
+		for (String elementoEnColumna: columnaTissueAvailable) {
+			System.out.println(" elemento en la columna tissue available: " + elementoEnColumna);
+		}
+		
+		PreparedStat.insertInto(conexion, csvLeido, 
+				"UnitID_Specimen", columnaVoucher,
+				"CountryName", columnaCountry,
+				"Collectors", columnaCollector,
+				"CollectionDate", columnaCollDate,
+				"CollectorsNo", columnaCollNumber,
+				"Locality", columnaLocality,
+				"Altitude", columnaAltitud,
+				"Longitude", columnaLongitud,
+				"Latitude", columnaLatitud, 
+				"LabCode", columnaLabcode,
+				"TissueID", columnaBGT,
+				"TissueAvailable", columnaTissueAvailable);
+		
+		
+		
+		
+		
 //		LeerFasta leerFasta = new LeerFasta();
 //		leerFasta.leerFastaFile();
 	}

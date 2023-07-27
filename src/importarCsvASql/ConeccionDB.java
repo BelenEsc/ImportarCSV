@@ -21,7 +21,10 @@ public class ConeccionDB {
 
 	public Connection dameConexion() {
 		try {
-			conex = DriverManager.getConnection("jdbc:mysql://localhost:3306/dnabank", "root", "");
+			conex = DriverManager.getConnection("jdbc:mysql://localhost:3306/dnabank2", "root", ""); 
+			
+			/* CAMBIAR AQUI LA BASE DE DATOS
+			*/
 
 		} catch (Exception e) {
 
@@ -63,24 +66,28 @@ public class ConeccionDB {
 		return indicesHeadersDB;
 	}
 
-	public List<String> textoEnColumnas(Connection conex, String nombreColumna) {
-		String statementColumna1 = "SELECT " + nombreColumna + " FROM " + tableName;
-		List<String> columnaX = new ArrayList<>();
-		Statement miStatement;
-		String linea;
-		try {
-			miStatement = conex.createStatement();
-			ResultSet rs = miStatement.executeQuery(statementColumna1);
-			while (rs.next()) {
-				linea = rs.getString(1);
-				columnaX.add(linea);
-//			System.out.println();
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return columnaX;
-	}
+//	public List<String> textoEnColumnas(Connection conex, String nombreColumna) {
+//		String statementColumna1 = "SELECT " + nombreColumna + " FROM " + tableName;
+//		List<String> columnaX = new ArrayList<>();
+//		Statement miStatement;
+//		String linea;
+//		try {
+//			miStatement = conex.createStatement();
+//			ResultSet rs = miStatement.executeQuery(statementColumna1);
+//			while (rs.next()) {
+//				linea = rs.getString(1);
+//				columnaX.add(linea);
+////			System.out.println();
+//			}
+//		} catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		return columnaX;
+//	}
+	
+	
+	
+	
 
 }
